@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: flyingwings-employeemanagementservice
+  profiles:
+    active:
+    - ${profile:sys} 
+  cloud:
+    config:
+      uri: ${config.server.uri:http://localhost:8888}
+    
